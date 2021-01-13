@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'GestionJeu.dart';
 import 'GestionStocks.dart';
+import 'GestionConstruct.dart';
 
 /*
 R1 ---> Usine1  \
@@ -18,9 +19,10 @@ maison + maison --> immeuble --> argent;
 int main(List<String> args) {
   var stock = GestionStocks();
   var jeu = GestionJeu();
-  var flag = true;
+  var creation = GestionConstruct();
+  var findetour = false;
 
-  while (flag == true) {
+  while (findetour == false) {
     var choix = jeu.mainMenu();
     switch (choix) {
       case 1:
@@ -38,21 +40,35 @@ int main(List<String> args) {
             stock.ramasserPierre();
             break;
 
-          case 99:
-            flag = false;
-            break;
-
           default:
         }
-        flag = true;
+        break;
+
+      case 3:
+        var construct = jeu.constructionMenu();
+        switch (construct) {
+          case 1:
+            print('Combien de planches voulez vous fabriquer ?');
+            creation.creationPlanche(jeu.selection());
+            break;
+          case 2:
+            print('Combien de pierres voulez vous fabriquer ?');
+            creation.creationBeton(jeu.selection());
+            break;
+          default:
+        }
+        break;
+
+      case 4:
+        jeu.recettesMenu();
         break;
 
       case 99:
-        flag = false;
+        findetour = true;
         break;
 
       default:
-        flag = false;
+        findetour = true;
     }
   }
 

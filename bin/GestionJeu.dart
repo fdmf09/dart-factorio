@@ -15,7 +15,6 @@ class GestionJeu {
     print('|  2  | Collecte de matériaux |');
     print('|  3  | Menu de construction  |');
     print('|  4  | Menu des recettes     |');
-    print('|  10 | Tour suivant          |');
     print('|  99 | Quitter le jeu        |');
     print(' ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
     print('');
@@ -48,7 +47,7 @@ class GestionJeu {
     return selection();
   }
 
-  int recettesMenu() {
+  void recettesMenu() {
     print('');
     print('Aide pour les recettes:');
     print('-----------------------------------------------');
@@ -64,6 +63,7 @@ class GestionJeu {
     print('1 immeuble (2 étages) = 25 argent / tour');
     print('1 immeuble (3 étages) = 50 argent / tour');
     print('1 immeuble (4 étages) = 100 argent / tour');
+    print('-----------------------------------------------');
     print('');
   }
 }
