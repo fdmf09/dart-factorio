@@ -8,7 +8,6 @@ class GestionJeu {
   }
 
   int mainMenu() {
-    print('');
     print('Que voulez vous faire ?');
     print(' _____________________________');
     print('|  1  | Reserves de matériaux |');
@@ -16,8 +15,7 @@ class GestionJeu {
     print('|  3  | Menu de construction  |');
     print('|  4  | Menu des recettes     |');
     print('|  99 | Quitter le jeu        |');
-    print(' ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
-    print('');
+    print(' ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\n');
     return selection();
   }
 
@@ -28,22 +26,20 @@ class GestionJeu {
     print('| 1  | Bois    |');
     print('| 2  | Pierre  |');
     print('| 99 | Retour  |');
-    print('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
-    print('');
+    print('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\n');
     return selection();
   }
 
   int constructionMenu() {
     print('');
     print('Que voulez vous construire ?');
-    print('_______________');
+    print('________________');
     print('| 1  | Planche  |');
     print('| 2  | Beton    |');
     print('| 3  | Maison   |');
     print('| 4  | Immeuble |');
     print('| 99 | Retour   |');
-    print('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
-    print('');
+    print('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\n');
     return selection();
   }
 
@@ -63,7 +59,6 @@ class GestionJeu {
     print('1 immeuble (2 étages) = 25 argent / tour');
     print('1 immeuble (3 étages) = 50 argent / tour');
     print('1 immeuble (4 étages) = 100 argent / tour');
-    print('-----------------------------------------------');
-    print('');
+    print('-----------------------------------------------\n');
   }
 }

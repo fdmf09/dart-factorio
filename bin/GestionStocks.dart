@@ -6,11 +6,16 @@ class GestionStocks {
   static int pierre = 0;
 
   void getStocks() {
-    print('Argent disponible: $argent');
-    print('Bois disponible: $bois');
-    print('Pierre disponible: $pierre');
-    print('Planches disponibles: ${GestionConstruct.planche}');
-    print('Beton disponible: ${GestionConstruct.beton}');
+    print('---------Ressources---------');
+    print('Argent: $argent');
+    print('Bois: $bois');
+    print('Pierre: $pierre');
+    print('Planches: ${GestionConstruct.planche}');
+    print('Beton: ${GestionConstruct.beton}');
+    print('---------Batiments---------');
+    print('Maisons: ${GestionConstruct.maison}');
+    print('Immeubles: ${GestionConstruct.immeuble}');
+    print('---------------------------\n');
   }
 
   int ramasserBois() {

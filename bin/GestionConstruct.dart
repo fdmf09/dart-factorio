@@ -1,8 +1,8 @@
 import 'GestionStocks.dart';
 
 class GestionConstruct {
-  static int planche = 0;
-  static int beton = 0;
+  static int planche = 15;
+  static int beton = 25;
   static int maison = 0;
   static int immeuble = 0;
 
@@ -13,7 +13,7 @@ class GestionConstruct {
     } else if (quantite < 0 ||
         GestionStocks.bois < quantite * 5 ||
         GestionStocks.bois < 5) {
-      print('! Quantitée de bois insufisante !');
+      print('! Quantitée de bois insufisante !\n');
     }
     return planche;
   }
@@ -25,7 +25,7 @@ class GestionConstruct {
     } else if (quantite < 0 ||
         GestionStocks.pierre < quantite * 10 ||
         GestionStocks.pierre < 10) {
-      print('! Quantitée de pierre insufisante !');
+      print('! Quantitée de pierre insufisante !\n');
     }
     return beton;
   }
@@ -37,7 +37,7 @@ class GestionConstruct {
       beton = beton - (25 * quantite);
     } else if (quantite <= 0 ||
         planche < quantite * 15 && beton < quantite * 25) {
-      print('! Quantitées insufisantes !');
+      print('! Quantitées insufisantes !\n');
     }
     return maison;
   }
